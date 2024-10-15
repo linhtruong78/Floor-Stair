@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Service from "./components/Service";
+import Text from "./components/Text";
 
 
 const App = () => {
@@ -14,12 +15,12 @@ const App = () => {
     <>
       <div id="home" className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
+        <Text/>
         <Banner />
         <AboutUs />
         <Service />
         <Contact />
         <Footer/>
-       
       </div>
     </>
   );

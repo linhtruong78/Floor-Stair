@@ -19,11 +19,6 @@ export const navigation = [
     },
     {
       id: "3",
-      title: "Gallery",
-      url: "#gallery",
-    },
-    {
-      id: "4",
       title: "Contact",
       url: "#contact",
     },

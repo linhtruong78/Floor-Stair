@@ -18,6 +18,7 @@ module.exports = {
           6: "#daa7a4",
           7: "#f6dde0",
           8: "#26242C",
+          9: '#172554',
         },
       },
       fontFamily: {
