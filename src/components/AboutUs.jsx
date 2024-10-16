@@ -3,8 +3,6 @@ import img from '../assets/img_fs/pic1.jpg'
 
 const AboutUs = () => {
   return (
-    <>
-        {/*Body*/}
         <div id="body" className='w-screen min-h-screen'>
             {/*Section 1*/}
             <div id="section" className='w-[screen] min-h-screen  flex items-start justify-center'>
@@ -34,8 +32,6 @@ const AboutUs = () => {
                     </div> 
             </div>
         </div>
-
-    </>
   )
 }
 

@@ -1,13 +1,14 @@
 import { navigation } from "../constants";
 import logo from "../assets/logo.jpg";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import MenuSvg from "../components/MenuSvg";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { FiPhone, FiMail } from "react-icons/fi";
 
 
 
-const Header = ({ onNavClick }) => {
+const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -18,9 +19,7 @@ const Header = ({ onNavClick }) => {
       disablePageScroll();
     }
   };
-  const handleNavClick = (event, section) => {
-    event.preventDefault(); 
-    onNavClick(event, section); 
+  const handleNavClick = () => {
     setOpenNavigation(false); 
     enablePageScroll(); 
   };
@@ -50,15 +49,15 @@ const Header = ({ onNavClick }) => {
           } fixed top-[8rem] left-0 right-0 bottom-0 lg:static lg:flex lg:bg-transparent`}>
           <div className="relative z-2 flex flex-col w-full bg-n-2 items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.id}
-                href={item.url}
+                to={item.url}
                 className={`block relative font-code text-sm uppercase text-n-1 transition-colors hover:text-n-3
                  px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold   lg:leading-5 xl:px-12`}
-                onClick={(event) => handleNavClick(event, item.title)}
+                onClick={() => handleNavClick()}
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>
