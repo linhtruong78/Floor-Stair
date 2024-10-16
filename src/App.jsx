@@ -6,11 +6,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Service from "./components/Service";
-<<<<<<< HEAD
-import Body from "./components/Body";
-=======
 import Home from "./components/Home";
->>>>>>> main
 
 
 const App = () => {
@@ -38,23 +34,11 @@ const App = () => {
   return (
     <>
       <div id="home" className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-<<<<<<< HEAD
-        <Header />
-        <Body />
-        <Banner />
-        <AboutUs />
-        <Service />
-        <Contact />
-=======
         <Header onNavClick={handleNavClick}/>
         <div className="mt-20 p-4">
           {renderSection()}
         </div>
-        
-        
-        
-        
->>>>>>> main
+           
         <Footer/>
       </div>
     </>
