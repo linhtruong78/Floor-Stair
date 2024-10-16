@@ -10,13 +10,8 @@ export const navigation = [
     
     {
       id: "1",
-<<<<<<< HEAD
-      title: "Portfolio",
-      url: "#aboutus",
-=======
       title: "Services",
       url: "/services",
->>>>>>> main
     },
     {
       id: "2",
@@ -26,11 +21,7 @@ export const navigation = [
     {
       id: "3",
       title: "FAQ",
-<<<<<<< HEAD
-      url: "#gallery",
-=======
       url: "/faq",
->>>>>>> main
     },
     {
       id: "4",

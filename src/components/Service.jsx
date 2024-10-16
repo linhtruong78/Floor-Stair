@@ -5,67 +5,50 @@ import pic3 from 'C:/Users/death/Floor-Stair/src/assets/pic3.jpg'
 
 const Service = () => {
   return (
-<<<<<<< HEAD
-    <div className='flex flex-col justify-center items-center h-screen mt-40'>
+    <div className='flex flex-col justify-center items-center h-screen'>
+      
       <h2 className='flex font-bold uppercase text-2xl'>
         Our Services
       </h2>
 
-      <div className='flex justify-center items-center h-screen '> 
+      <div className=' relative flex flex-col justify-center items-center w-screen sm:flex-row'> 
       {/* container */}
-        <div className='relative mt-4 w-1/3 h-1/2 '>
+        <div className='relative w-1/3 h-[100%]'>
             <img
             src={pic1} 
             alt="Service" 
             className=' w-full h-full object-cover p-2 '/>
-           
-        <div className="absolute inset-0 flex items-center justify-center ">
-          <span className="text-5xl font-bold text-black bg-white bg-opacity-50 p-2">
-            Floors
-          </span>
-        </div>
 
           <button id="button" 
-          className='absolute text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2'>
-            Learn about
+          className='absolute hover:text-n-3 text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
+            Floor
           </button>
 
         </div>
         
         
-        <div className='relative mt-4 w-1/3 h-1/2'>
+        <div className='relative w-1/3 h-[100%]'>
           <img
           src={pic2} 
           alt="Service" 
           className='w-full h-full object-cover p-2'/>
 
-          <div className="absolute inset-1 flex items-center justify-center ">
-            <span className="text-5xl font-bold text-black bg-white text-center bg-opacity-50 p-2">
-              Stairs and railings
-            </span>
-          </div>
-
           <button id="button" 
-          className='absolute text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2'>
-            Learn about
+          className='absolute hover:text-n-3 text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
+            Stairs
           </button>
         </div>
 
-        <div className='relative mt-4 w-1/3 h-1/2'>
+        <div className='relative w-1/3 h-[100%]'>
           <img
           src={pic3} 
           alt="Service" 
           className='w-full h-full object-cover p-2'/>
 
-          <div className="absolute inset-1 flex items-center justify-center ">
-            <span className="text-5xl font-bold text-black bg-white bg-opacity-50 p-2">
-              Tiles
-            </span>
-          </div>
 
           <button id="button" 
-          className='absolute text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2'>
-            Learn about
+          className='absolute hover:text-n-3 text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
+            Tiles
           </button>
         </div>
       </div>
@@ -74,10 +57,5 @@ const Service = () => {
     </div>
   );
 };
-=======
-    <div>service</div>
-  )
-}
->>>>>>> main
 
 export default Service
