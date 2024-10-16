@@ -5,27 +5,37 @@ export const navigation = [
     {
       id: "0",
       title: "Home",
-      url: "#home",
+      url: "/",
     },
+    
     {
       id: "1",
+<<<<<<< HEAD
       title: "Portfolio",
       url: "#aboutus",
+=======
+      title: "Services",
+      url: "/services",
+>>>>>>> main
     },
     {
       id: "2",
-      title: "Service",
-      url: "#service",
+      title: "Portfolio",
+      url: "/portfolio",
     },
     {
       id: "3",
       title: "FAQ",
+<<<<<<< HEAD
       url: "#gallery",
+=======
+      url: "/faq",
+>>>>>>> main
     },
     {
       id: "4",
       title: "Contact",
-      url: "#contact",
+      url: "/contact",
     },
   ];
 

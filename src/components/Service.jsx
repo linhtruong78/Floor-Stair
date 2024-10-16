@@ -5,6 +5,7 @@ import pic3 from 'C:/Users/death/Floor-Stair/src/assets/pic3.jpg'
 
 const Service = () => {
   return (
+<<<<<<< HEAD
     <div className='flex flex-col justify-center items-center h-screen mt-40'>
       <h2 className='flex font-bold uppercase text-2xl'>
         Our Services
@@ -73,5 +74,10 @@ const Service = () => {
     </div>
   );
 };
+=======
+    <div>service</div>
+  )
+}
+>>>>>>> main
 
 export default Service
