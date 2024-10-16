@@ -8,7 +8,7 @@ import Text from "./Text";
 const Home = () => {
   return (
     <div>
-        <Text />
+        <Text/>
         <AboutUs />
         <Service />
         <Contact />

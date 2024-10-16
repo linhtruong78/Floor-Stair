@@ -9,7 +9,7 @@ export const navigation = [
     },
     {
       id: "1",
-      title: "About Us",
+      title: "Portfolio",
       url: "#aboutus",
     },
     {
@@ -19,7 +19,7 @@ export const navigation = [
     },
     {
       id: "3",
-      title: "Gallery",
+      title: "FAQ",
       url: "#gallery",
     },
     {
