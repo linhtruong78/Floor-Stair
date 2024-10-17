@@ -13,9 +13,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <>
-      <div id="home" className="pt-[3rem] overflow-hidden bg-n-6">
+      <div id="home" className="pt-[3rem] overflow-hidden bg-n-1">
         <Header/>
-        <div className="mt-20 p-4 lg:mx-[200px]">
+        
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Service />} />
@@ -23,7 +23,8 @@ const App = () => {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+      
+           
         <Footer/>
       </div>
     </>
