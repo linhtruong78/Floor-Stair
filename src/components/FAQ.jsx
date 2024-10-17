@@ -1,8 +1,12 @@
 import React from 'react'
-
-const FAQs = () => {
+import Banner from './Banner'
+const FAQs = ({showBanner}) => {
   return (
-    <div>FAQs</div>
+    <>
+    <div>
+      {showBanner && <Banner title="Frequent Asked Questions" />}
+    </div>
+    </>
   )
 }
 
