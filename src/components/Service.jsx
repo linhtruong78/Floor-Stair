@@ -17,10 +17,17 @@ const Service = () => {
             <img
             src={pic1} 
             alt="Service" 
-            className=' w-full h-full object-cover p-2 '/>
+            className=' w-full h-full object-cover p-2'/>
+
+        <div className='absolute inset-0 flex items-center justify-center 
+        bg-black bg-opacity-40 text-white p-4 opacity-0 hover:opacity-100 
+        transition-opacity duration-300 m-2'>
+          <h2 className='text-3xl font-bold'>Floor</h2>
+        </div>
 
           <button id="button" 
-          className='absolute hover:text-n-3 text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
+          className='absolute hover:text-n-3 hover:scale-105 transition-all duration-300 text-2xl left-1/2 
+          transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12 '>
             Floor
           </button>
 
@@ -33,8 +40,15 @@ const Service = () => {
           alt="Service" 
           className='w-full h-full object-cover p-2'/>
 
+        <div className='absolute inset-0 flex items-center justify-center 
+        bg-black bg-opacity-40 text-white p-4 opacity-0 hover:opacity-100 
+        transition-opacity duration-300 m-2'>
+          <h2 className='text-3xl font-bold'>Stairs and railings</h2>
+        </div>
+
           <button id="button" 
-          className='absolute hover:text-n-3 text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
+          className='absolute hover:text-n-3 hover:scale-105 transition-all duration-300 text-2xl left-1/2 
+          transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
             Stairs
           </button>
         </div>
@@ -45,9 +59,16 @@ const Service = () => {
           alt="Service" 
           className='w-full h-full object-cover p-2'/>
 
+        <div className='absolute inset-0 flex items-center justify-center 
+        bg-black bg-opacity-40 text-white p-4 opacity-0 hover:opacity-100 
+        transition-opacity duration-300 m-2'>
+          <h2 className='text-3xl font-bold'>Tiles</h2>
+        </div>  
+
 
           <button id="button" 
-          className='absolute hover:text-n-3 text-2xl left-1/2 transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
+          className='absolute hover:text-n-3 hover:scale-105 transition-all duration-300 text-2xl left-1/2 
+          transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
             Tiles
           </button>
         </div>
