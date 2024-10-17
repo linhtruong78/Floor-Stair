@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { projects } from "../constants";
-
+import Banner from './Banner';
 
 const categories = ['All', 'Stairs', 'Floors', 'Tiles'];
-const Gallery = () => {
+const Gallery = ({showBanner}) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProjects =
@@ -11,10 +11,14 @@ const Gallery = () => {
       ? projects
       : projects.filter((project) => project.category === selectedCategory);
   return (
-    <div className="container mx-auto p-4">
+    <>
+    <div>
+      {showBanner && <Banner title="Showcase our works" />}
+    </div>
+    <div className=" mx-auto px-[15%] py-10 bg-n-2/5">
       <div className='flex flex-col lg:flex-row justify-center pt-5 mt-5'>
         <div id="left" className='w-full text-center lg:text-left px-5 lg:pl-[10%] py-5 items-center'>
-          <h2 className="text-5xl font-bold mb-4">
+          <h2 className="text-5xl font-bold mb-4 ">
             Portfolio
           </h2>
           <p className="text-n-2/70 mb-6 text-xl">
@@ -39,7 +43,7 @@ const Gallery = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="relative group overflow-hidden">
+          <div key={project.id} className="relative group overflow-hidden shadow-xl">
             <img
               src={project.image}
               alt={project.category}
@@ -52,6 +56,7 @@ const Gallery = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

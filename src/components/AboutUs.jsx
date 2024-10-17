@@ -26,7 +26,7 @@ const AboutUs = () => {
         </button>
       </div>
       <div id="right" className="relative w-full h-screen overflow-hidden px-5 md:pr-[10%] ">
-        <ImageSlider>
+        <ImageSlider autoSlide={true} autoSlideInterval={5000}>
           {slides.map((s, index) => (
             <img 
               key={index} 

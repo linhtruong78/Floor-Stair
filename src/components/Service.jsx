@@ -2,14 +2,19 @@ import React from 'react'
 import pic1 from '../assets/pic1.jpg'
 import pic2 from '../assets/pic2.jpg'
 import pic3 from '../assets/pic3.jpg'
+import Banner from './Banner'
 
-const Service = () => {
+const Service = ({ showBanner }) => {
   const list = [
     {img:pic1,title:"Floors"},
     {img:pic2,title:"Stairs and Railings"},
     {img:pic3,title:"Tiles"}
   ];
   return (
+    <>
+    <div>
+      {showBanner && <Banner title="Our Services" />}
+    </div>
     <div className=' bg-n-2/5'>
       <div className='w-full mx-auto text-center pt-8 px-[25%]'>
         <h2 className="text-5xl font-bold mb-4">
@@ -45,6 +50,7 @@ const Service = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

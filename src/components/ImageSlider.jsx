@@ -16,10 +16,10 @@ export default function Carousel({
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1))
 
   useEffect(() => {
-    if (!autoSlide) return
+    if (!autoSlide) return;
     const slideInterval = setInterval(next, autoSlideInterval)
     return () => clearInterval(slideInterval)
-  }, [])
+  }, []);
   return (
     <div className="overflow-hidden relative">
       <div
