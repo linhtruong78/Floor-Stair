@@ -40,6 +40,24 @@ export const navigation = [
     },
   ];
 
+  export const servicestuffs = [
+    {
+      id: "0",
+      title: "Floor",
+      url: "/floor",
+    },
+    {
+      id: "1",
+      title: "Stair",
+      url: "/stair",
+    },
+    {
+      id: "2",
+      title: "Tiles",
+      url: "/tile",
+    },
+  ];
+
   export const socialMedia = [
     {
       id: "0",

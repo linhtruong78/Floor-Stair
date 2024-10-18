@@ -15,7 +15,6 @@ const Home = () => {
         <Service showBanner={false}/>
         <Specialty />
         <Customer />
-        
         <Gallery />
         <Quote />
     </div>
