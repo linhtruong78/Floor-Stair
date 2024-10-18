@@ -1,6 +1,7 @@
 import React from 'react'
 import img1 from '../assets/pic1.jpg'
 import img2 from '../assets/pic2.jpg'
+import Button from './utilities/Button'
 const Specialty = () => {
   return (
     <div className='flex flex-col lg:flex-row py-20 '>
@@ -15,9 +16,7 @@ const Specialty = () => {
                     satisfaction top of mind. While our stairs pair perfectly with our expert flooring services, they can also be integrated 
                     seamlessly with existing flooring, enhancing the design, safety, and value of your home.
                 </p>
-                <button id="button" className='font-bold text-white bg-gray-900 p-2 my-5 flex justify-center mx-auto lg:mx-0'>
-                    BOOK YOUR FREE QUOTE
-                </button>
+                <Button/>
             </div>
         </div>
         <div id='right' className='relative w-full lg:w-1/2 px-10 lg:mr-[15%] mx-5 lg:ml-[10%] h-[600px]'> 

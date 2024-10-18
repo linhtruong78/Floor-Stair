@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutUs from "./AboutUs";
-import Contact from "./Contact";
+import Quote from "./Quote";
 import Service from "./Service";
 import Gallery from "./Gallery";
 import Customer from './Customer';
@@ -17,7 +17,7 @@ const Home = () => {
         <Customer />
         
         <Gallery />
-        <Contact />
+        <Quote />
     </div>
     
   );
