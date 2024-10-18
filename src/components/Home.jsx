@@ -5,7 +5,7 @@ import Service from "./Service";
 import Gallery from "./Gallery";
 import Customer from './Customer';
 import Specialty from './Specialty';
-
+import Floor from './ServiceStuffs/Floor';
 
 
 const Home = () => {

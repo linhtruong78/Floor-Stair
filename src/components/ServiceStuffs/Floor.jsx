@@ -1,9 +1,14 @@
 import React from 'react';
-import img from '/src/assets/pic1.jpg';
+import img from '../../assets/pic1.jpg';
 
-const Floor = () => {
+
+const Floor = ({showBanner}) => {
   return (
-    <div id="floorbody" className="relative w-screen min-h-screen "
+    <>
+    <div>
+      {showBanner && <Banner title="Floors" />}
+    </div>
+    <div id="floorbody" className="relative w-screen min-h-screen lg:-mx-[200px]"
     style={{ 
         background: 'linear-gradient(to right, rgba(255, 255, 255, 0) 70%, black 30%)' 
       }}>
@@ -116,7 +121,7 @@ const Floor = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 
