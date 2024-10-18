@@ -37,10 +37,10 @@ const Header = () => {
 
           <div className={`flex flex-col items-start transition-opacity duration-300 text-white ml-3`}>
             <div className="flex items-center">
-              <FiMail size={20} className="mr-2" />:luharry59@gmail.com
+              <FiMail size={20} className="mr-2" />: luharry59@gmail.com
             </div>
             <div className="flex items-center">
-              <FiPhone size={20} className="mr-2" />:+1 (437)-876-4552
+              <FiPhone size={20} className="mr-2" />: +1 (437)-876-4552
             </div>
           </div>
         </div>

@@ -1,10 +1,12 @@
 import React from 'react';
-// import AboutUs from "./AboutUs";
-// import Contact from "./Contact";
-// import Service from "./Service";
-import Floor from './ServiceStuffs/Floor';
-import Stairs from './ServiceStuffs/Stairs';
-import Tiles from './ServiceStuffs/Tiles';
+import AboutUs from "./AboutUs";
+import Contact from "./Contact";
+import Service from "./Service";
+import Gallery from "./Gallery";
+import Customer from './Customer';
+import Specialty from './Specialty';
+
+
 
 const Home = () => {
   return (
@@ -13,7 +15,11 @@ const Home = () => {
         <Floor/>
         <Stairs/>
         <AboutUs />
-        <Service />
+        <Service showBanner={false}/>
+        <Specialty />
+        <Customer />
+        
+        <Gallery />
         <Contact />
     </div>
     

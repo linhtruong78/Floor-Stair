@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import { FaPhone } from "react-icons/fa6";
 import { IoMail, IoLocation  } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
-const Contact = () => {
+import Banner from "./Banner";
+const Contact = ({showBanner}) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -58,7 +59,11 @@ const Contact = () => {
 
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center  py-12 px-4">
+    <>
+    <div>
+      {showBanner && <Banner title="Contact Us" />}
+    </div>
+    <div className=" flex flex-col lg:flex-row justify-center py-12 px-4 lg:mx-[200px]">
       {/* Left Section */}
       <div className="lg:w-1/2 w-full text-left mb-10 lg:mb-0 pr-5 pt-5">
         <h2 className="text-4xl font-bold mb-4">
@@ -100,7 +105,7 @@ const Contact = () => {
       </div>
 
       {/* Right Section */}
-      <div className="lg:w-1/2 w-full bg-n-3 text-n-2 p-8 rounded-lg">
+      <div className="lg:w-1/2 w-full bg-n-6 text-n-2 p-8 rounded-lg">
         <h3 className="text-2xl font-bold text-n-2 mb-6">Send us a Message</h3>
 
         <form
@@ -145,13 +150,14 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='bg-n-5 py-3 px-8 rounded-xl outline-none w-full font-bold shadow-lg shadow-primary'
+            className='bg-n-5 py-3 px-8 rounded-xl outline-none w-full font-bold shadow-lg'
           >
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </div>
     </div>
+    </>
   );
 };
 

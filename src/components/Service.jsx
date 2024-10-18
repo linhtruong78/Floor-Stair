@@ -1,81 +1,56 @@
 import React from 'react'
-import pic1 from 'C:/Users/death/Floor-Stair/src/assets/pic1.jpg'
-import pic2 from 'C:/Users/death/Floor-Stair/src/assets/pic2.jpg'
-import pic3 from 'C:/Users/death/Floor-Stair/src/assets/pic3.jpg'
+import pic1 from '../assets/pic1.jpg'
+import pic2 from '../assets/pic2.jpg'
+import pic3 from '../assets/pic3.jpg'
+import Banner from './Banner'
 
-const Service = () => {
+const Service = ({ showBanner }) => {
+  const list = [
+    {img:pic1,title:"Floors"},
+    {img:pic2,title:"Stairs and Railings"},
+    {img:pic3,title:"Tiles"}
+  ];
   return (
-    <div className='flex flex-col justify-center items-center h-screen'>
-      
-      <h2 className='flex font-bold uppercase text-2xl'>
-        Our Services
-      </h2>
-
-      <div className=' relative flex flex-col justify-center items-center w-screen sm:flex-row'> 
-      {/* container */}
-        <div className='relative w-1/3 h-[100%]'>
-            <img
-            src={pic1} 
-            alt="Service" 
-            className=' w-full h-full object-cover p-2'/>
-
-        <div className='absolute inset-0 flex items-center justify-center 
-        bg-black bg-opacity-40 text-white p-4 opacity-0 hover:opacity-100 
-        transition-opacity duration-300 m-2'>
-          <h2 className='text-3xl font-bold'>Floor</h2>
-        </div>
-
-          <button id="button" 
-          className='absolute hover:text-n-3 hover:scale-105 transition-all duration-300 text-2xl left-1/2 
-          transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12 '>
-            Floor
-          </button>
-
-        </div>
-        
-        
-        <div className='relative w-1/3 h-[100%]'>
-          <img
-          src={pic2} 
-          alt="Service" 
-          className='w-full h-full object-cover p-2'/>
-
-        <div className='absolute inset-0 flex items-center justify-center 
-        bg-black bg-opacity-40 text-white p-4 opacity-0 hover:opacity-100 
-        transition-opacity duration-300 m-2'>
-          <h2 className='text-3xl font-bold'>Stairs and railings</h2>
-        </div>
-
-          <button id="button" 
-          className='absolute hover:text-n-3 hover:scale-105 transition-all duration-300 text-2xl left-1/2 
-          transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
-            Stairs
-          </button>
-        </div>
-
-        <div className='relative w-1/3 h-[100%]'>
-          <img
-          src={pic3} 
-          alt="Service" 
-          className='w-full h-full object-cover p-2'/>
-
-        <div className='absolute inset-0 flex items-center justify-center 
-        bg-black bg-opacity-40 text-white p-4 opacity-0 hover:opacity-100 
-        transition-opacity duration-300 m-2'>
-          <h2 className='text-3xl font-bold'>Tiles</h2>
-        </div>  
-
-
-          <button id="button" 
-          className='absolute hover:text-n-3 hover:scale-105 transition-all duration-300 text-2xl left-1/2 
-          transform -translate-x-1/2 font-bold text-white bg-gray-900 p-2 w-40 h-12'>
-            Tiles
-          </button>
-        </div>
-      </div>
-
-
+    <>
+    <div>
+      {showBanner && <Banner title="Our Services" />}
     </div>
+    <div className=' bg-n-2/5'>
+      <div className='w-full mx-auto text-center pt-8 px-[25%]'>
+        <h2 className="text-5xl font-bold mb-4">
+          Services
+        </h2>
+        <p className="text-n-2/70 mb-6 text-xl">
+          At 4H Flooring & Stairs, we focus on making your home look great. We offer a wide range of flooring options
+          like LVP, laminate, and hardwood, as well as expert stair installations that elevate your space. We also
+          provide bathroom tiling and backsplashes services.
+        </p>          
+      </div>
+      
+
+      <div className='flex flex-col justify-center items-center lg:flex-row px-[20%] pb-20'>
+        {list.map((pic, index) => (
+          <div key={index} className='relative w-full bg-n-6 m-2 overflow-hidden group text-center'>
+            <div className='relative h-[400px] overflow-hidden'>
+              <img
+                src={pic.img}
+                alt={`${pic.title}`}
+                className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'
+              />
+            </div>
+            <div className='bg-n-6 p-4 shadow-md'>
+              <h3 className='font-bold text-2xl pb-4 uppercase'>{pic.title}</h3>
+              
+              <button className='bg-gradient-to-r from-n-2/50 to-n-2/80 text-white px-4 py-2 rounded 
+              transition-all duration-500 hover:bg-gradient-to-l hover:from-n-2/50 hover:to-n-2/80 shadow-lg'>
+                Learn More
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    </>
   );
 };
 

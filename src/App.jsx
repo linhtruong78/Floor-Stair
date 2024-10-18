@@ -13,17 +13,17 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <>
-      <div id="home" className="pt-[3rem] overflow-hidden bg-n-6">
+      <div id="home" className="pt-[3rem] overflow-hidden bg-n-1">
         <Header/>
-        <div className="mt-20 p-4 lg:mx-[200px]">
+        
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Service />} />
-            <Route path="/portfolio" element={<Gallery />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Service showBanner={true}/>} />
+            <Route path="/portfolio" element={<Gallery showBanner={true}/>} />
+            <Route path="/faq" element={<FAQ showBanner={true}/>} />
+            <Route path="/contact" element={<Contact showBanner={true}/>} />
           </Routes>
-        </div>
+      
            
         <Footer/>
       </div>
