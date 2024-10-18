@@ -11,14 +11,10 @@ import Specialty from './Specialty';
 const Home = () => {
   return (
     <div>
-      <Tiles/>
-        <Floor/>
-        <Stairs/>
         <AboutUs />
         <Service showBanner={false}/>
         <Specialty />
         <Customer />
-        
         <Gallery />
         <Contact />
     </div>
