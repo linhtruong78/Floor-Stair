@@ -45,13 +45,13 @@ export const navigation = [
       id: "0",
       title: "Instagram",
       iconUrl: SlSocialInstagram,
-      url: "https://www.instagram.com",
+      url: "https://www.instagram.com/4h.stairs_and_flooring/",
     },
     {
       id: "1",
       title: "Facebook",
       iconUrl: SlSocialFacebook,
-      url: "https://www.facebook.com",
+      url: "https://www.facebook.com/DORIS10822",
     },
     {
       id: "2",

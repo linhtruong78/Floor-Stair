@@ -4,6 +4,7 @@ import img1 from '../assets/pic1.jpg'
 import img2 from '../assets/pic2.jpg'
 import img3 from '../assets/pic3.jpg'
 import ImageSlider from "./ImageSlider";
+import Button from './utilities/Button';
 
 const AboutUs = () => {
   const slides = [img1, img2, img3];
@@ -21,9 +22,7 @@ const AboutUs = () => {
           We specialize in transforming homes with professional flooring, stairs, and tile renovation services.
           Proudly serving the Greater Toronto Area with quality craftsmanship and care.
         </p>
-        <button id="button" className='font-bold text-white bg-gray-900 p-2 mt-5 flex justify-center mx-auto lg:mx-0 '>
-          BOOK YOUR FREE QUOTE
-        </button>
+        <Button/>
       </div>
       <div id="right" className="relative w-full h-screen overflow-hidden px-5 md:pr-[10%] ">
         <ImageSlider autoSlide={true} autoSlideInterval={5000}>

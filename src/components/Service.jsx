@@ -28,7 +28,7 @@ const Service = ({ showBanner }) => {
       </div>
       
 
-      <div className='flex flex-col justify-center items-center lg:flex-row px-[20%] pb-20'>
+      <div className='flex flex-col justify-center items-center lg:flex-row px-[15%] pb-20'>
         {list.map((pic, index) => (
           <div key={index} className='relative w-full bg-n-6 m-2 overflow-hidden group text-center'>
             <div className='relative h-[400px] overflow-hidden'>
