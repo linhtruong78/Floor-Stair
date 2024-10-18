@@ -7,7 +7,7 @@ const Tile = ({showBanner}) => {
     <div>
       {showBanner && <Banner title="Frequent Asked Questions" />}
     </div>
-    <div id="tilebody" className="relative w-screen min-h-screen lg:-mx-[200px]"
+    <div id="tilebody" className="relative w-screen min-h-screen"
     style={{ 
         background: 'linear-gradient(to right, rgba(255, 255, 255, 0) 70%, black 30%)' 
       }}>

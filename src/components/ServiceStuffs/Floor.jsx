@@ -8,7 +8,7 @@ const Floor = ({showBanner}) => {
     <div>
       {showBanner && <Banner title="Floors" />}
     </div>
-    <div id="floorbody" className="relative w-screen min-h-screen lg:-mx-[200px]"
+    <div id="floorbody" className="relative w-screen min-h-screen"
     style={{ 
         background: 'linear-gradient(to right, rgba(255, 255, 255, 0) 70%, black 30%)' 
       }}>
