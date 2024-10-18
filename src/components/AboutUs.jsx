@@ -1,37 +1,45 @@
+/* eslint-disable react/jsx-key */
 import React from 'react'
-import img from '../assets/img_fs/pic1.jpg'
+import img1 from '../assets/pic1.jpg'
+import img2 from '../assets/pic2.jpg'
+import img3 from '../assets/pic3.jpg'
+import ImageSlider from "./ImageSlider";
+import Button from './utilities/Button';
 
 const AboutUs = () => {
+  const slides = [img1, img2, img3];
+  
+  
+
   return (
-        <div id="body" className='w-screen min-h-screen'>
-            {/*Section 1*/}
-            <div id="section" className='w-[screen] min-h-screen  flex items-start justify-center'>
-                {/*Container*/}
-                <div id="container" className=' w-[90%]  flex justify-center'>
-                    {/*Left*/}
-                    <div id="left" className='w-[50%] p-20 flex-1 justify-center min-h-[80vh] overflow-y ml-10'>
-                        <div id= "heading" className="font-bold  text-6xl text-left mb-4">
-                            Flooring and Stairs Contractor for Toronto, ON
-                        </div>
-                        <div id="text" className="text-2xl text-left p-3">
-                            We specialize in transforming homes with professional flooring, stairs, and tile renovation services. Proudly serving the Greater Toronto Area with quality craftsmanship and care.
-                        </div>
-                        <button id="button" className='font-bold text-white bg-gray-900 p-2 mt-5 flex justify-center '>BOOK YOUR FREE QUOTE</button>
-                    </div>
-                      
-                </div>
-                {/*Right*/}
-                <div id= "right" className= 'w-[60%] h-screen flex-grow left-[200%] transform translate-x-[50%] bg-gray-900 '></div>
-                {/*Image*/}
-                <div id= "image" className='w-[50%] flex justify-center relative '> 
-                    <img 
-                        src={img}
-                        alt="Flooring and Stairs"
-                        className="w-[100%] min-h-[35px] flex justify-center absolute top-4 right-[125%] transform translate-x-[50%] overflow-y"
-                        />
-                    </div> 
-            </div>
-        </div>
+  <div className='relative flex flex-col lg:flex-row'>
+    <div className='absolute top-0 left-0 right-0 z-10 flex flex-col lg:flex-row justify-center pt-10 mt-20'>
+      <div id="container" className='w-full text-center lg:text-left px-5 lg:pl-[15%] lg:mr-[5%] py-5 items-center'>
+        <h2 className="text-5xl font-bold mb-4">
+          Flooring and Stairs Contractor for Toronto, ON
+        </h2>
+        <p className="text-n-2/70 mb-6 text-xl">
+          We specialize in transforming homes with professional flooring, stairs, and tile renovation services.
+          Proudly serving the Greater Toronto Area with quality craftsmanship and care.
+        </p>
+        <Button/>
+      </div>
+      <div id="right" className="relative w-full h-screen overflow-hidden px-5 md:pr-[10%] ">
+        <ImageSlider autoSlide={true} autoSlideInterval={5000}>
+          {slides.map((s, index) => (
+            <img 
+              key={index} 
+              src={s}
+              className="w-full h-[500px] lg:h-[700px] object-cover" 
+              alt={`Slide ${index}`} 
+            />
+          ))}
+        </ImageSlider>
+      </div>
+    </div>
+    <div className='w-full pl-[40%]'></div>
+    <div className='w-full h-screen bg-n-6 lg:mr-[5%] mb-10'></div>
+  </div>
   )
 }
 
