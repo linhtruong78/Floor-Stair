@@ -1,9 +1,9 @@
 import React from 'react';
-import img from 'C:/Users/death/Floor-Stair/src/assets/pic1.jpg';
+import img from '/src/assets/pic1.jpg';
 
 const Stairs = () => {
   return (
-    <div id="floorbody" className="relative w-screen min-h-screen lg:-mx-[200px]"
+    <div id="floorbody" className="relative w-screen min-h-screen"
       style={{ 
           background: 'linear-gradient(to right, rgba(255, 255, 255, 0) 70%, black 30%)' 
         }}>
