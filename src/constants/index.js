@@ -1,6 +1,7 @@
 import { SlSocialInstagram }  from "react-icons/sl";
 import { SlSocialFacebook } from "react-icons/sl";
 import { SlSocialGoogle } from "react-icons/sl";
+
 import img1 from '../assets/pic1.jpg'
 import img2 from '../assets/pic2.jpg'
 import img3 from '../assets/pic3.jpg'
@@ -14,7 +15,13 @@ export const navigation = [
     {
       id: "1",
       title: "Services",
-      url: "/services",
+      url: "#",
+      hasSubmenu: true,
+      submenu: [
+        { id: 1, title: "Floors", url: "/services" },
+        { id: 2, title: "Stairs and Railings", url: "/services" },
+        { id: 3, title: "Tiles", url: "/services" }
+      ]
     },
     {
       id: "2",
