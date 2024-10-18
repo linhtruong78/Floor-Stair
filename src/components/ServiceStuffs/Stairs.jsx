@@ -1,8 +1,12 @@
 import React from 'react';
-import img from 'C:/Users/death/Floor-Stair/src/assets/pic1.jpg';
+import img from '../../assets/pic1.jpg';
 
-const Stairs = () => {
+const Stairs = ({showBanner}) => {
   return (
+    <>
+    <div>
+      {showBanner && <Banner title="Frequent Asked Questions" />}
+    </div>
     <div id="floorbody" className="relative w-screen min-h-screen lg:-mx-[200px]"
       style={{ 
           background: 'linear-gradient(to right, rgba(255, 255, 255, 0) 70%, black 30%)' 
@@ -92,7 +96,7 @@ const Stairs = () => {
           <strong>GET IN TOUCH WITH US TODAY</strong>
         </button>
       </div>
-    </div>
+    </div></>
   );
 };
 

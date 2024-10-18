@@ -1,8 +1,12 @@
 import React from 'react';
-import img from 'C:/Users/death/Floor-Stair/src/assets/pic1.jpg'; // Update the image path accordingly
+import img from '../../assets/pic1.jpg';
 
-const Tile = () => {
+const Tile = ({showBanner}) => {
   return (
+    <>
+    <div>
+      {showBanner && <Banner title="Frequent Asked Questions" />}
+    </div>
     <div id="tilebody" className="relative w-screen min-h-screen lg:-mx-[200px]"
     style={{ 
         background: 'linear-gradient(to right, rgba(255, 255, 255, 0) 70%, black 30%)' 
@@ -29,7 +33,7 @@ const Tile = () => {
             <div id="heading" className="font-bold text-6xl text-left mb-10 text-gray-500">
               <strong>Professional Tile Installation Services in Toronto</strong>
             </div>
-            <div id="text" className="text-2xl text-left mb-10">
+          <div id="text" className="text-2xl text-left mb-10">
               At <strong>4H Flooring and Stairs</strong>, we offer premier tile installation services throughout Toronto, specializing in bathroom and kitchen tiling that enhances any home aesthetic. Rely on our expert tile contractors for the precision and care your project deserves.
             </div>
 
@@ -120,7 +124,7 @@ const Tile = () => {
           <strong>CONTACT US</strong>
         </button>
       </div>
-    </div>
+    </div></>
   );
 };
 

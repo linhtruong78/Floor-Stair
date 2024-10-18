@@ -3,12 +3,13 @@ import pic1 from '../assets/pic1.jpg'
 import pic2 from '../assets/pic2.jpg'
 import pic3 from '../assets/pic3.jpg'
 import Banner from './Banner'
+import {Link} from 'react-router-dom';
 
 const Service = ({ showBanner }) => {
   const list = [
-    {img:pic1,title:"Floors"},
-    {img:pic2,title:"Stairs and Railings"},
-    {img:pic3,title:"Tiles"}
+    {img:pic1,title:"Floors", link:"floors"},
+    {img:pic2,title:"Stairs and Railings", link:"stairs"},
+    {img:pic3,title:"Tiles", link:"tiles"}
   ];
   return (
     <>
@@ -40,11 +41,11 @@ const Service = ({ showBanner }) => {
             </div>
             <div className='bg-n-6 p-4 shadow-md'>
               <h3 className='font-bold text-2xl pb-4 uppercase'>{pic.title}</h3>
-              
+              <Link to="/floors">
               <button className='bg-gradient-to-r from-n-2/50 to-n-2/80 text-white px-4 py-2 rounded 
               transition-all duration-500 hover:bg-gradient-to-l hover:from-n-2/50 hover:to-n-2/80 shadow-lg'>
                 Learn More
-              </button>
+              </button></Link>
             </div>
           </div>
         ))}
