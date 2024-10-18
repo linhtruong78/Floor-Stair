@@ -4,12 +4,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MenuSvg from "../components/MenuSvg";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { FiPhone, FiMail } from "react-icons/fi";
+import { FiPhone, FiMail, FiChevronDown } from "react-icons/fi";
 
 
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
+
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
@@ -22,8 +24,15 @@ const Header = () => {
   const handleNavClick = () => {
     setOpenNavigation(false); 
     enablePageScroll(); 
+    toggleSubmenu();
   };
-  
+  const toggleSubmenu = (id) => {
+    if (openSubmenu === id) {
+      setOpenSubmenu(null);
+    } else {
+      setOpenSubmenu(id);
+    }
+  };
   return (
     <div className={`fixed top-0 left-0 w-full z-50 border-b bg-n-2 lg:backdrop-blur-sm backdrop-blur-sm`}>
       <div className="justify-between flex items-center px-5 lg:mx-20 lg:px-7.5 xl:px-10 max-lg:py-4">
@@ -48,16 +57,45 @@ const Header = () => {
             openNavigation ? "flex" : "hidden"
           } fixed top-[8rem] left-0 right-0 bottom-0 lg:static lg:flex lg:bg-transparent`}>
           <div className="relative z-2 flex flex-col w-full bg-n-2 items-center justify-center m-auto lg:flex-row">
-            {navigation.map((item) => (
-              <Link
-                key={item.id}
-                to={item.url}
-                className={`block relative font-code text-sm uppercase text-n-1 transition-colors hover:text-n-3
-                 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold   lg:leading-5 xl:px-12`}
-                onClick={() => handleNavClick()}
-              >
-                {item.title}
-              </Link>
+          {navigation.map((item) => (
+              <div key={item.id} className="relative group">
+                <Link
+                  to={item.hasSubmenu ? "#" : item.url}
+                  className={`relative font-code text-sm uppercase text-n-1 transition-colors hover:text-n-3 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 xl:px-12 flex items-center`}
+                  onClick={() => {
+                    if (item.hasSubmenu) {
+                      toggleSubmenu(item.id);
+                    } else {
+                      handleNavClick();
+                    }
+                  }}
+                >
+                  {item.title}
+                  {item.hasSubmenu && (
+                    <FiChevronDown
+                    className={`ml-2 transform transition-transform ${
+                      openSubmenu === item.id ? "rotate-180" : ""
+                    }`}
+                    size={16}
+                  />
+                  )}
+                </Link>
+
+                {item.hasSubmenu && openSubmenu === item.id && (
+                  <div className="absolute left-0 w-full mt-2 bg-n-2  rounded-lg shadow-lg">
+                    {item.submenu.map((submenuItem) => (
+                      <Link
+                        key={submenuItem.id}
+                        to={submenuItem.url}
+                        className="block px-8 py-2 text-sm text-white hover:bg-gray-700"
+                        onClick={handleNavClick}
+                      >
+                        {submenuItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </nav>
