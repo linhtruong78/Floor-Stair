@@ -1,6 +1,6 @@
 import React from 'react'
-import img1 from '../assets/pic1.jpg'
-import img2 from '../assets/pic2.jpg'
+import img1 from '../assets/spec2.jpg'
+import img2 from '../assets/spec1.jpg'
 import Button from './utilities/Button'
 const Specialty = () => {
   return (

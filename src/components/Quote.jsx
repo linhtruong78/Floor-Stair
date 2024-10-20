@@ -1,5 +1,5 @@
 import React from 'react'
-import pic3 from '../assets/pic3.jpg'
+import pic3 from '../assets/quote.jpg'
 import Button from './utilities/Button'
 
 const Quote = () => {

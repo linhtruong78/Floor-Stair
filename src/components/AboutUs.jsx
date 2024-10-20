@@ -1,13 +1,15 @@
 /* eslint-disable react/jsx-key */
 import React from 'react'
-import img1 from '../assets/pic1.jpg'
-import img2 from '../assets/pic2.jpg'
-import img3 from '../assets/pic3.jpg'
+import home1 from '../assets/home1.jpg'
+import home2 from '../assets/home2.jpg'
+import home3 from '../assets/home3.jpg'
+import home4 from '../assets/home4.jpg'
+import home5 from '../assets/home5.jpg'
 import ImageSlider from "./ImageSlider";
 import Button from './utilities/Button';
 
 const AboutUs = () => {
-  const slides = [img1, img2, img3];
+  const slides = [home1, home2, home4, home5, home3];
   
   
 

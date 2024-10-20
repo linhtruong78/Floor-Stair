@@ -41,7 +41,7 @@ const Service = ({ showBanner }) => {
             </div>
             <div className='bg-n-6 p-4 shadow-md'>
               <h3 className='font-bold text-2xl pb-4 uppercase'>{pic.title}</h3>
-              <Link to="/floors">
+              <Link to={pic.link}>
               <button className='bg-gradient-to-r from-n-2/50 to-n-2/80 text-white px-4 py-2 rounded 
               transition-all duration-500 hover:bg-gradient-to-l hover:from-n-2/50 hover:to-n-2/80 shadow-lg'>
                 Learn More

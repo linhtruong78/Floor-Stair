@@ -26,6 +26,9 @@ module.exports = {
         sora: "var(--font-sora)",
         comic: "var(--font-comic)",
       },
+      backgroundImage: {
+        'wb-gradient': 'linear-gradient(to right, rgba(255, 255, 255, 0) 70%, #f7edba 30%)',
+      },
     },
   },
   plugins: [],

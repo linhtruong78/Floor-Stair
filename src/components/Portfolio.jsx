@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { projects } from "../constants";
+import { projects2 } from "../constants";
 import Banner from './Banner';
 import Quote from './Quote';
 
 const categories = ['All', 'Stairs', 'Floors', 'Tiles'];
-const Gallery = ({showBanner}) => {
+const Portfolio = ({showBanner}) => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProjects =
     selectedCategory === 'All'
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      ? projects2
+      : projects2.filter((project) => project.category === selectedCategory);
   return (
     <>
     <div>
@@ -57,9 +57,8 @@ const Gallery = ({showBanner}) => {
         ))}
       </div>
     </div>
-    <Quote/>
   </>
   );
 };
 
-export default Gallery;
+export default Portfolio;
